@@ -18,7 +18,7 @@ export default {
     },
     draggable: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     free: {
       type: Boolean,
@@ -180,6 +180,9 @@ export default {
         draggable: {
           enabled: this.draggable,
           showGhost: true,
+        },
+        drawable: {
+          enabled: this.draggable,
         },
         orientation: this.orientation,
       });
