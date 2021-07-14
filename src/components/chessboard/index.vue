@@ -1,5 +1,6 @@
 <template>
   <div class="board merida">
+    draggable: {{draggable}}
     <div ref="board" class="cg-board-wrap"></div> </br>
   </div>
 </template>
