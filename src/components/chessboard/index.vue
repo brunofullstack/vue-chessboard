@@ -38,10 +38,10 @@ export default {
     },
   },
   watch: {
-    // fen: function (newFen) {
-    //   this.fen = newFen;
-    //   this.loadPosition();
-    // },
+    fen: function (newFen) {
+      this.fen = newFen;
+      this.loadPosition();
+    },
     orientation: function (orientation) {
       this.orientation = orientation;
       this.loadPosition();
