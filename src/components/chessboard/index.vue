@@ -38,6 +38,12 @@ export default {
     },
   },
   watch: {
+    draggable: function (isDraggable) {
+      this.draggable = isDraggable;
+    },
+    free: function (isFree) {
+      this.free = isFree;
+    },
     fen: function (newFen) {
       this.fen = newFen;
       this.loadPosition();
