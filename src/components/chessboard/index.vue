@@ -1,11 +1,7 @@
 <template>
-<section>
-    <h1>draggable: {{draggable}}</h1>
-
   <div class="board merida">
     <div ref="board" class="cg-board-wrap"></div> </br>
   </div>
-</section>
 </template>
 
 <script>
@@ -199,6 +195,10 @@ export default {
       });
       this.board.set({
         movable: { events: { after: this.changeTurn() } },
+        draggable: {
+          enabled: this.draggable,
+          showGhost: true,
+        },
       });
       this.afterMove();
     },
