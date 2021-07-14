@@ -1,6 +1,6 @@
 <template>
   <div class="board merida">
-    <div ref="board" class="cg-board-wrap"></div> </br>
+    <div ref="board" class="cg-board-wrap"></div>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     },
     draggable: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     free: {
       type: Boolean,
