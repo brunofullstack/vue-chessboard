@@ -122,6 +122,10 @@ export default {
             color: this.toColor(),
             dests: this.possibleMoves(),
           },
+          draggable: {
+            enabled: this.draggable,
+            showGhost: true,
+          },
         });
         this.calculatePromotions();
         this.afterMove();
@@ -180,9 +184,6 @@ export default {
         draggable: {
           enabled: this.draggable,
           showGhost: true,
-        },
-        drawable: {
-          enabled: this.draggable,
         },
         orientation: this.orientation,
       });
