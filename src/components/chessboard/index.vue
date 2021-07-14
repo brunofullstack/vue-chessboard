@@ -1,8 +1,11 @@
 <template>
+<section>
+    <h1>draggable: {{draggable}}</h1>
+
   <div class="board merida">
-    draggable: {{draggable}}
     <div ref="board" class="cg-board-wrap"></div> </br>
   </div>
+</section>
 </template>
 
 <script>
