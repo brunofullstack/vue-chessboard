@@ -185,6 +185,10 @@ export default {
           enabled: this.draggable,
           showGhost: true,
         },
+        selectable: {
+          // disable to enforce dragging over click-click move
+          enabled: false,
+        },
         orientation: this.orientation,
       });
       this.board.set({
