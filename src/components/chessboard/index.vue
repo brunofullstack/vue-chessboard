@@ -32,10 +32,6 @@ export default {
       type: Function,
       default: () => "q",
     },
-    movebleColor: {
-      type: String,
-      default: "white",
-    },
     orientation: {
       type: String,
       default: "white",
@@ -123,7 +119,7 @@ export default {
           fen: this.game.fen(),
           turnColor: this.toColor(),
           movable: {
-            color: this.movebleColor,
+            color: this.toColor(),
             dests: this.possibleMoves(),
           },
           draggable: {
@@ -181,11 +177,18 @@ export default {
         fen: this.game.fen(),
         turnColor: this.toColor(),
         movable: {
-          color: this.movebleColor,
+          color: this.toColor(),
           free: this.free,
           dests: this.possibleMoves(),
         },
-        draggable: this.draggable,
+        draggable: {
+          enabled: this.draggable,
+          showGhost: true,
+        },
+        selectable: {
+          // disable to enforce dragging over click-click move
+          enabled: false,
+        },
         orientation: this.orientation,
       });
       this.board.set({
