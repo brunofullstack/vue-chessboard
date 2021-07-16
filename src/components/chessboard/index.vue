@@ -181,14 +181,7 @@ export default {
           free: this.free,
           dests: this.possibleMoves(),
         },
-        draggable: {
-          enabled: this.draggable,
-          showGhost: true,
-        },
-        selectable: {
-          // disable to enforce dragging over click-click move
-          enabled: false,
-        },
+        draggable: this.draggable,
         orientation: this.orientation,
       });
       this.board.set({
