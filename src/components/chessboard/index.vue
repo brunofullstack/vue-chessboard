@@ -16,6 +16,10 @@ export default {
       type: String,
       default: "",
     },
+    draggable: {
+      type: Boolean,
+      default: true,
+    },
     free: {
       type: Boolean,
       default: false,
@@ -27,6 +31,10 @@ export default {
     onPromotion: {
       type: Function,
       default: () => "q",
+    },
+    movebleColor: {
+      type: String,
+      default: "white",
     },
     orientation: {
       type: String,
@@ -113,10 +121,14 @@ export default {
         this.game.move({ from: orig, to: dest, promotion: this.promoteTo }); // promote to queen for simplicity
         this.board.set({
           fen: this.game.fen(),
-          turnColor: 'both',
+          turnColor: this.toColor(),
           movable: {
-            color: this.toColor(),
+            color: this.movebleColor,
             dests: this.possibleMoves(),
+          },
+          draggable: {
+            enabled: this.draggable,
+            showGhost: true,
           },
         });
         this.calculatePromotions();
@@ -169,7 +181,7 @@ export default {
         fen: this.game.fen(),
         turnColor: this.toColor(),
         movable: {
-          color: this.toColor(),
+          color: this.movebleColor,
           free: this.free,
           dests: this.possibleMoves(),
         },
