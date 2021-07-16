@@ -1,7 +1,7 @@
 {
   "name": "vue-chessboard",
   "description": "Chessboard vue component to load positions, create positions and see threats",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "author": {
     "name": "brunofullstack",
     "email": "brunofullstack@users.noreply.github.com"
