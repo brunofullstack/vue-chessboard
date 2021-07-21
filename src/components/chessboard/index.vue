@@ -181,7 +181,7 @@ export default {
         fen: this.game.fen(),
         turnColor: this.toColor(),
         movable: {
-          color: this.toColor(),
+          color: this.orientation,
           free: this.free,
           dests: this.possibleMoves(),
         },
