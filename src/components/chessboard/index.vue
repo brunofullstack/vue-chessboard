@@ -16,9 +16,9 @@ export default {
       type: String,
       default: "",
     },
-    draggable: {
+    drawable: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     free: {
       type: Boolean,
@@ -122,9 +122,8 @@ export default {
             color: this.toColor(),
             dests: this.possibleMoves(),
           },
-          draggable: {
-            enabled: this.draggable,
-            showGhost: true,
+          drawable: {
+            enabled: this.drawable,
           },
         });
         this.calculatePromotions();
