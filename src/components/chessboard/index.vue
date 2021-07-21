@@ -181,7 +181,6 @@ export default {
         fen: this.game.fen(),
         turnColor: this.toColor(),
         movable: {
-          color: this.orientation,
           free: this.free,
           dests: this.possibleMoves(),
         },
@@ -193,6 +192,11 @@ export default {
           enabled: false,
         },
         orientation: this.orientation,
+        premovable: {
+          enabled: true,
+          showDests: true,
+          castle: true,
+        },
       });
       this.board.set({
         movable: { events: { after: this.changeTurn() } },
