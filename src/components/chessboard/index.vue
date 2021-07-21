@@ -180,9 +180,8 @@ export default {
           free: this.free,
           dests: this.possibleMoves(),
         },
-        draggable: {
-          enabled: this.draggable,
-          showGhost: true,
+        drawable: {
+          enabled: this.drawable,
         },
         selectable: {
           // disable to enforce dragging over click-click move
