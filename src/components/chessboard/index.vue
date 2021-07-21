@@ -16,6 +16,10 @@ export default {
       type: String,
       default: "",
     },
+    viewOnly: {
+      type: Boolean,
+      default: false,
+    },
     drawable: {
       type: Boolean,
       default: false,
@@ -173,6 +177,7 @@ export default {
       // set a default value for the configuration object itself to allow call to loadPosition()
       this.game.load(this.fen);
       this.board = Chessground(this.$refs.board, {
+        viewOnly: this.viewOnly,
         fen: this.game.fen(),
         turnColor: this.toColor(),
         movable: {
