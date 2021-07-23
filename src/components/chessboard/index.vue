@@ -204,12 +204,11 @@ export default {
       this.afterMove();
     },
     lockBoard() {
-      console.log('SLAAAAAAAAAAAAAAAAAAYER!')
       this.board.set({
         viewOnly: true,
-        drawable: {
-          enabled: true,
-        },
+        movable: {
+          color: 'white',
+        }
       });
     }
   },
