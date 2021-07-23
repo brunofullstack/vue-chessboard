@@ -203,13 +203,17 @@ export default {
       });
       this.afterMove();
     },
-    lockBoard() {
+    lockBoard(fen) {
+      this.chess.load(fen)
+
       this.board.set({
         viewOnly: true,
+        fen: fen,
+        turnColor: 'white',
         movable: {
           color: 'white',
         }
-      });
+      })
     }
   },
   mounted() {
