@@ -6,7 +6,7 @@
 
 <script>
 import Chess from "chess.js";
-import { Chessground } from "chessground";
+import { Chessground } from "chessgroundx";
 import { uniques } from "./Util.js";
 
 export default {
@@ -193,10 +193,10 @@ export default {
         },
         orientation: this.orientation,
         premovable: {
-          enabled: true,
-          showDests: true,
-          castle: true,
-        },
+        enabled: true,
+        showDests: true,
+        castle: true,
+      },
       });
       this.board.set({
         movable: { events: { after: this.changeTurn() } },
