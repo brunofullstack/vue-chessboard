@@ -81,8 +81,7 @@ export default {
       }
     },
     toColor() {
-      // return this.game.turn() === "w" ? "white" : "black";
-      return "black";
+      return this.game.turn() === "w" ? "white" : "black";
     },
     paintThreats() {
       let moves = this.game.moves({ verbose: true });
@@ -204,6 +203,11 @@ export default {
       });
       this.afterMove();
     },
+    lockBoard() {
+      this.board.set({
+        viewOnly: true,
+      });
+    }
   },
   mounted() {
     this.loadPosition();
