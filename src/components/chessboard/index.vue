@@ -81,7 +81,8 @@ export default {
       }
     },
     toColor() {
-      return this.game.turn() === "w" ? "white" : "black";
+      // return this.game.turn() === "w" ? "white" : "black";
+      return "black";
     },
     paintThreats() {
       let moves = this.game.moves({ verbose: true });
@@ -198,9 +199,9 @@ export default {
         castle: true,
       },
       });
-      // this.board.set({
-      //   movable: { events: { after: this.changeTurn() } },
-      // });
+      this.board.set({
+        movable: { events: { after: this.changeTurn() } },
+      });
       this.afterMove();
     },
   },
