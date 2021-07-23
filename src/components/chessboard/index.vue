@@ -198,9 +198,9 @@ export default {
         castle: true,
       },
       });
-      this.board.set({
-        movable: { events: { after: this.changeTurn() } },
-      });
+      // this.board.set({
+      //   movable: { events: { after: this.changeTurn() } },
+      // });
       this.afterMove();
     },
   },
